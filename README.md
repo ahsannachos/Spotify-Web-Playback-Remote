@@ -1,6 +1,6 @@
-# Spotify-Web-Playback-Remote
+# Spotify Web Player App
 A web-based Spotify remote player built with the [Spotify Web Playback SDK](https://developer.spotify.com/documentation/web-playback-sdk/) and JavaScript.  
-This project allows you to authenticate with Spotify, control playback, view album art, and see the upcoming queue—all from your browser.
+This project allows you to authenticate with Spotify, control playback, view album art, and see the upcoming queue—all from your browser, in simple its a music player app that allows you to listen songs and those songs are being played by by your Spotify account because we are using SPotify API.
 
 ---
 
@@ -47,13 +47,17 @@ This project allows you to authenticate with Spotify, control playback, view alb
 Open `login.html` and `callback.html`
 Replace the `client_id` value with your Spotify app’s client ID.
 
-4. **Start a local server**
+3. **Start a local server**
    
 Use Python for the server, type `python -m http.server 3000` on the VSCode terminal
 
-6. **Open `login.html` in your browser**
+4. **Open `login.html` in your browser**
    
 Click "Login with Spotify" to start the authentication flow.
+
+5. **Choose Spotify Remote Player from Spotify App**
+
+Now open your spotify app on phone or browser, and from the playback, choose **"Spotify Remote Player"** and boom then your music will be start playing from this web music player and you will see currently playing music name, cover image, que songs along with music controls. Thanks!
 
 ### File Structure
 ```sh

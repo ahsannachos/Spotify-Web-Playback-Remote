@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spotify API Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-gray-900 via-grey-800 to-black min-h-screen flex items-center justify-left"
+  >
+    <div class="w-full max-w-3xl mx-auto p-6">
+      <!-- Logo -->
+      <img
+        class="mx-auto mb-8 drop-shadow-lg"
+        src="https://upload.wikimedia.org/wikipedia/commons/3/33/Spotify_logo13.png"
+        width="220"
+        alt="Spotify Logo"
+      />
+
+      <!-- Main Card -->
+      <div
+        class="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-8 flex flex-col items-center"
+      >
+        <!-- Album Art -->
+        <img
+          class="rounded-xl shadow-lg mb-6 border-4 border-green-400"
+          id="albumArt"
+          src=""
+          alt="Album Art"
+          width="320"
+        />
+
+        <!-- Song Name -->
+        <div
+          id="nowplayingname"
+          class="text-2xl font-bold text-white mb-6 text-center"
+        ></div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-center space-x-6 mb-6">
+          <button
+            id="previous"
+            class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-full shadow transition"
+          >
+            Prev.
+          </button>
+          <button
+            id="togglePlay"
+            class="bg-green-500 hover:bg-green-400 text-white px-6 py-2 rounded-full shadow-lg text-lg font-semibold transition"
+          >
+            Pause
+          </button>
+          <button
+            id="next"
+            class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-full shadow transition"
+          >
+            Frwrd.
+          </button>
+        </div>
+
+        <!-- Seekbar -->
+        <div class="flex items-center w-full space-x-4">
+          <span class="text-white text-sm font-bold" id="currentTime"
+            >0:00</span
+          >
+          <input
+            class="custom-range w-full h-2 accent-green-400 bg-gray-700 rounded-lg"
+            type="range"
+            id="seekBar"
+            value="0"
+            min="0"
+            max="100"
+            step="1"
+          />
+          <span class="font-bold text-white" id="duration">0:00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Up Next Queue -->
+    <div
+      id="quelist"
+      class="fixed right-8 bottom-8 w-80 bg-white/10 backdrop-blur-lg p-6 z-50 rounded-2xl shadow-2xl border border-green-400"
+    >
+      <h2 class="text-green-400 text-xl font-bold mb-4">Up Next</h2>
+      <!-- Queue items will be injected here -->
+    </div>
+
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="Spotifyremotescript.js"></script>
+  </body>
+</html>
